@@ -3,3 +3,66 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  background-color: #FFF5E2;
+}
+
+img{
+  height: 100%
+}
+
+.wrapper{
+  height: 100vh;
+  max width: 1170px;
+  margin: 0 auto;
+}
+
+.wrapper > *{
+  padding: 30px;
+}
+
+header{
+  height: 150px;
+  background-color: #FDBB40;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+h1{
+  font-size: 45px;
+}
+
+main{
+  height: calc(100% - 250px);
+  background-color: #ffff;
+  overflow-y: auto;
+}
+
+.ingredients-list{
+  height: 270px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.ingredient{
+  height: 90px;
+  padding: 15px 0;
+}
+
+.ingredient .img{
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ingredient input{
+  vertical-align: middle;
+}
+
+footer{
+  height: 100px;
+  background-color: #D33359;
+  color: #fff;
+  font-size: 30px;
+}

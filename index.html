@@ -7,5 +7,105 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Create Your Burger</h1>
+      </header>
+
+      <main>
+        <input class="burger-name" type="text" name="nome-burger" placeholder="Name Your Burger" value>
+
+        <h2>Ingredients</h2>
+
+        <div class="ingredients-list">
+          <div class="ingredient">
+            <div class="img">
+              <img src="https://via.placeholder.com/150" alt="Cheese">
+            </div>
+
+            <label for="first-ingredient">Cheese</label>
+
+            <input type="checkbox" name="first-ingredient" value="2.00">
+
+            <span>add</span>
+          </div>
+
+          <div class="ingredient">
+            <div class="img">
+              <img src="https://via.placeholder.com/150" alt="Egg">
+            </div>
+
+            <label for="first-ingredient">Egg</label>
+
+            <input type="checkbox" name="first-ingredient" value="1.50">
+
+            <span>add</span>
+          </div>
+
+          <div class="ingredient">
+            <div class="img">
+              <img src="https://via.placeholder.com/150" alt="Mustard">
+            </div>
+
+            <label for="first-ingredient">Mustard</label>
+
+            <input type="checkbox" name="first-ingredient" value="0.50">
+
+            <span>add</span>
+          </div>
+
+          <div class="ingredient">
+            <div class="img">
+              <img src="https://via.placeholder.com/150" alt="Tomato">
+            </div>
+
+            <label for="first-ingredient">Tomato</label>
+
+            <input type="checkbox" name="first-ingredient" value="2.00">
+
+            <span>add</span>
+          </div>
+
+          <div class="ingredient">
+            <div class="img">
+              <img src="https://via.placeholder.com/150" alt="Lettuce">
+            </div>
+
+            <label for="first-ingredient">Lettuce</label>
+
+            <input type="checkbox" name="first-ingredient" value="1.50">
+
+            <span>add</span>
+          </div>
+
+          <div class="ingredient">
+            <div class="img">
+              <img src="https://via.placeholder.com/150" alt="Ketchup">
+            </div>
+
+            <label for="first-ingredient">Ketchup</label>
+
+            <input type="checkbox" name="first-ingredient" value="0.50">
+
+            <span>add</span>
+          </div>
+        </div>
+
+        <div class="coupon">
+          <label for="discount-coupon">Discount Coupon</label>
+          <input type="text" name="discount-coupon" placeholder="COUPON123" value>
+        </div>
+
+        <button type="button" name="button">calculate</button>
+      </main>
+
+      <footer>
+        <span>Your price</span>
+
+        <span id="total"></span>
+      </footer>
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
