@@ -74,7 +74,7 @@ document.getElementsByTagName('button')[0].addEventListener('click' , function()
   if (flagName && flagMinIngredients) {
     totalPriceHTML.innerText = '$ ' + finalPrice;
 
-    alert(finalPrice)
+    // alert(finalPrice)
   }
 
   console.log(ingredientsPrice);
