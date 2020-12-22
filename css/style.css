@@ -39,7 +39,7 @@ header .img{
   height: 200px;
   transform: translate(-50%, -50%);
   position: absolute;
-  left: calc(50vw - 30px);
+  left: calc(75vw - 30px);
   top: 50%;
 }
 
@@ -130,7 +130,7 @@ footer{
   color: #fff;
   font-size: 30px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 #total{
