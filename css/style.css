@@ -6,10 +6,15 @@
 
 body{
   background-color: #FFF5E2;
+  font-family: 'Roboto', sans-serif;
 }
 
 img{
   height: 100%
+}
+
+.hidden{
+  visibility: hidden;
 }
 
 .wrapper{
@@ -27,21 +32,32 @@ header{
   background-color: #FDBB40;
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
 }
 
 header .img{
   height: 200px;
+  transform: translate(-50%, -50%);
   position: absolute;
+  left: calc(50vw - 30px);
+  top: 50%;
 }
 
 h1{
-  font-size: 45px;
+  font-size: 40px;
 }
 
 main{
   height: calc(100% - 250px);
   background-color: #ffff;
   overflow-y: auto;
+}
+
+main > input[type=text]{
+  border: none;
+  height: 35px;
+  font-size: 28px;
+  margin-bottom: 15px;
 }
 
 .ingredients-list{
@@ -61,8 +77,18 @@ main{
   vertical-align: middle;
 }
 
-.ingredient input{
+.checkbox{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-color: #D33359;
   vertical-align: middle;
+  margin: 0 5px;
+}
+
+.checkbox i{
+  font-size: 20px;
+  transform: translate(-1px, -4px);
 }
 
 footer{

@@ -1,115 +1,141 @@
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JustIno</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Create Your Burger</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JustIno</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Create Your Burger</h1>
 
-        <div class="img">
-          <img src="img/burger-top.png" alt="hamburger">
-        </div>
-      </header>
+      <div class="img">
+        <img src="img/burger-top.png" alt="hamburger">
+      </div>
+    </header>
 
-      <main>
-        <input class="burger-name" type="text" name="nome-burger" placeholder="Name Your Burger" value>
+    <main>
+      <input class="burger-name" type="text" name="nome-burger" placeholder="Name Your Burger" value>
 
-        <h2>Ingredients</h2>
+      <h2>Ingredients</h2>
 
-        <div class="ingredients-list">
-          <div class="ingredient">
-            <div class="img">
-              <img src="https://via.placeholder.com/150" alt="Cheese">
-            </div>
-
-            <label for="cheese">Cheese</label>
-
-            <input type="checkbox" id="cheese" name="ingredients" value="2.00">
-
-            <span>add</span>
+      <div class="ingredients-list">
+        <div class="ingredient">
+          <div class="img">
+            <img src="img/cheese.svg" alt="Cheese">
           </div>
 
-          <div class="ingredient">
-            <div class="img">
-              <img src="https://via.placeholder.com/150" alt="Egg">
-            </div>
+          <label for="cheese">Cheese</label>
 
-            <label for="egg">Egg</label>
+          <div class="checkbox">
+            <i class="fa fa-check hidden" aria-hidden="true"></i>
 
-            <input type="checkbox" id="egg" name="ingredients" value="1.50">
-
-            <span>add</span>
+            <input class="hidden" type="checkbox" id="cheese" name="ingredients" value="2.00">
           </div>
 
-          <div class="ingredient">
-            <div class="img">
-              <img src="https://via.placeholder.com/150" alt="Mustard">
-            </div>
-
-            <label for="mustard">Mustard</label>
-
-            <input type="checkbox" id="mustard" name="ingredients" value="0.50">
-
-            <span>add</span>
-          </div>
-
-          <div class="ingredient">
-            <div class="img">
-              <img src="https://via.placeholder.com/150" alt="Tomato">
-            </div>
-
-            <label for="tomato">Tomato</label>
-
-            <input type="checkbox" id="tomato" name="ingredients" value="2.00">
-
-            <span>add</span>
-          </div>
-
-          <div class="ingredient">
-            <div class="img">
-              <img src="https://via.placeholder.com/150" alt="Lettuce">
-            </div>
-
-            <label for="Lettuce">Lettuce</label>
-
-            <input type="checkbox" id="Lettuce" name="ingredients" value="1.50">
-
-            <span>add</span>
-          </div>
-
-          <div class="ingredient">
-            <div class="img">
-              <img src="https://via.placeholder.com/150" alt="Ketchup">
-            </div>
-
-            <label for="Ketchup">Ketchup</label>
-
-            <input type="checkbox" id="Ketchup" name="ingredients" value="0.50">
-
-            <span>add</span>
-          </div>
+          <span>add</span>
         </div>
 
-        <div class="coupon">
-          <label for="discount-coupon">Discount Coupon</label>
-          <input type="text" name="discount-coupon" placeholder="COUPON123" value>
+        <div class="ingredient">
+          <div class="img">
+            <img src="img/fried-egg.svg" alt="Egg">
+          </div>
+
+          <label for="egg">Egg</label>
+
+          <div class="checkbox">
+            <i class="fa fa-check hidden" aria-hidden="true"></i>
+
+            <input class="hidden" type="checkbox" id="egg" name="ingredients" value="1.50">
+          </div>
+
+          <span>add</span>
         </div>
 
-        <button type="button" name="button">calculate</button>
-      </main>
+        <div class="ingredient">
+          <div class="img">
+            <img src="img/mustard.svg" alt="Mustard">
+          </div>
 
-      <footer>
-        <span>Your price</span>
+          <label for="mustard">Mustard</label>
 
-        <span id="total"></span>
-      </footer>
-    </div>
+          <div class="checkbox">
+            <i class="fa fa-check hidden" aria-hidden="true"></i>
 
-    <script src="js/script.js" charset="utf-8"></script>
-  </body>
+            <input class="hidden" type="checkbox" id="mustard" name="ingredients" value="0.50">
+          </div>
+
+          <span>add</span>
+        </div>
+
+        <div class="ingredient">
+          <div class="img">
+            <img src="img/tomato.svg" alt="Tomato">
+          </div>
+
+          <label for="tomato">Tomato</label>
+
+          <div class="checkbox">
+            <i class="fa fa-check hidden" aria-hidden="true"></i>
+
+            <input class="hidden" type="checkbox" id="tomato" name="ingredients" value="2.00">
+          </div>
+
+          <span>add</span>
+        </div>
+
+        <div class="ingredient">
+          <div class="img">
+            <img src="img/lettuce.svg" alt="Lettuce">
+          </div>
+
+          <label for="Lettuce">Lettuce</label>
+
+          <div class="checkbox">
+            <i class="fa fa-check hidden" aria-hidden="true"></i>
+
+            <input class="hidden" type="checkbox" id="Lettuce" name="ingredients" value="1.50">
+          </div>
+
+          <span>add</span>
+        </div>
+
+        <div class="ingredient">
+          <div class="img">
+            <img src="img/ketchup.svg" alt="Ketchup">
+          </div>
+
+          <label for="Ketchup">Ketchup</label>
+
+          <div class="checkbox">
+            <i class="fa fa-check hidden" aria-hidden="true"></i>
+
+            <input class="hidden" type="checkbox" id="Ketchup" name="ingredients" value="0.50">
+          </div>
+
+          <span>add</span>
+        </div>
+      </div>
+
+      <div class="coupon">
+        <label for="discount-coupon">Discount Coupon</label>
+        <input type="text" name="discount-coupon" placeholder="COUPON123" value>
+      </div>
+
+      <button type="button" name="button">calculate</button>
+    </main>
+
+    <footer>
+      <span>Your price</span>
+
+      <span id="total"></span>
+    </footer>
+  </div>
+
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
 </html>
