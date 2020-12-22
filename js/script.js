@@ -1,73 +1,77 @@
+// Valori costanti--------------------------------------------------------------
+var minCheckedIngredients = 2;
+
+var burgerBaseCost = 6;
+
+var discount = 0.2;
+
+var coupons = ['evil20', 'garm20', 'wolf20', 'kel20']
+//------------------------------------------------------------------------------
+
 var burgerName = document.getElementsByClassName('burger-name')[0];
 
-var okGoTot;
+var flagName = false;
+
+var flagMinIngredients = false;
+
+var flagTot = false;
 
 var ingredients = document.getElementsByClassName('ingredients-list')[0].getElementsByTagName('input')
 
 var counterCheckedIngredients;
 
-var totalPrice = 5.30;
+var ingredientsPrice = 0;
+
+var totalPrice;
 
 var totalPriceHTML = document.getElementById('total');
-
-var coupons = ['evil20', 'garm20', 'wolf20', 'kel20']
 
 var couponInput = document.getElementsByClassName('coupon')[0].getElementsByTagName('input')[0];
 
 var couponFlag;
 
+var discountedPrice = 0;
+
+var finalPrice;
+
 document.getElementsByTagName('button')[0].addEventListener('click' , function(){
-  okGoTot = false;
+  flagName = false;
 
   if (burgerName.value) {
-    okGoTot = true;
+    flagName = true;
   }else {
     alert('You must name your burger!');
-
-    okGoTot = false;
   }
 
   counterCheckedIngredients = 0;
 
-  totalPrice = 5.30;
+  ingredientsPrice = 0;
 
   for (var i = 0; i < ingredients.length; i++) {
     if (ingredients[i].checked) {
       counterCheckedIngredients++;
 
-      totalPrice += parseFloat(ingredients[i].value);
+      ingredientsPrice += parseFloat(ingredients[i].value);
     }
   }
 
-  if (counterCheckedIngredients >= 2) {
-    okGoTot = true;
-  } else {
-    okGoTot = false;
+  flagMinIngredients = false;
 
+  if (counterCheckedIngredients >= minCheckedIngredients) {
+    flagMinIngredients = true;
+  } else {
     alert('You have to choose at least two ingredients!');
   }
 
-  couponFlag = false;
-
-  for (var i = 0; i < coupons.length; i++) {
-    if (coupons[i] === couponInput.value.toLowerCase()) {
-      couponFlag = true;
-    }else if (couponInput.value === '') {
-      console.log('Coupon non inserito.');
-    }else {
-      couponFlag = false;
-    }
+  if (coupons.indexOf(couponInput.value.toLowerCase()) !== -1) {
+    discountedPrice = (burgerBaseCost + ingredientsPrice) * discount;
   }
 
-  if (couponFlag) {
-    totalPrice = totalPrice * 0.8;
-  }else {
-    alert('Coupon non valido.')
-  }
+  finalPrice = (burgerBaseCost + ingredientsPrice) - discountedPrice;
 
-  if (okGoTot) {
-    totalPriceHTML.innerText = '$ ' + totalPrice;
+  if (flagName && flagMinIngredients) {
+    totalPriceHTML.innerText = '$ ' + finalPrice;
 
-    alert(totalPrice)
+    alert(finalPrice)
   }
 });
