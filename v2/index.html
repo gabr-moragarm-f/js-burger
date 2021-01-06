@@ -24,10 +24,13 @@
 
     <!-- Parte centrale di scelta ingredienti e calcolo prezzo -->
     <main>
+      <!-- Input del nome del burger -->
       <input class="burger-name" type="text" name="nome-burger" placeholder="Name Your Burger" value>
+      <!-- /Input del nome del burger -->
 
       <h2>Ingredients</h2>
 
+      <!-- Lista degli ingredienti -->
       <div class="ingredients-list">
         <div class="ingredient">
           <label for="cheese">
@@ -137,21 +140,28 @@
           </label>
         </div>
       </div>
+      <!-- /Lista degli ingredienti -->
 
+      <!-- Inserimento coupon -->
       <div class="coupon">
         <label for="discount-coupon">Discount Coupon</label>
         <input id="discount-coupon" type="text" name="discount-coupon" placeholder="Insert your coupon here!" value>
       </div>
+      <!-- /Inserimento coupon -->
 
+      <!-- Submit -->
       <button type="button" name="button">calculate</button>
+      <!-- /Submit -->
     </main>
     <!-- /Parte centrale di scelta ingredienti e calcolo prezzo -->
 
+    <!-- Footer con prezzo totale -->
     <footer>
       <span>Your price</span>
 
       <span id="total"></span>
     </footer>
+    <!-- /Footer con prezzo totale -->
   </div>
   <!-- /Contenitore di pagina -->
 

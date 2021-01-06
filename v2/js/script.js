@@ -34,6 +34,7 @@ var discountedPrice = 0;
 
 var finalPrice;
 
+// Validazione input utente-----------------------------------------------------
 document.getElementsByTagName('button')[0].addEventListener('click' , function(){
   flagName = false;
 
@@ -79,11 +80,13 @@ document.getElementsByTagName('button')[0].addEventListener('click' , function()
 
   console.log(ingredientsPrice);
 });
+// -----------------------------------------------------------------------------
 
 var ingredientsMainHTML = document.getElementsByTagName('main')[0];
 
 var checkSign = document.getElementsByTagName('i');
 
+// Checkbox personalizzata------------------------------------------------------
 ingredientsMainHTML.addEventListener('click', function(){
   for (var i = 0; i < ingredients.length; i++) {
     if (ingredients[i].checked) {
@@ -93,3 +96,4 @@ ingredientsMainHTML.addEventListener('click', function(){
     }
   }
 })
+// -----------------------------------------------------------------------------
